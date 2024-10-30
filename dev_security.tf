@@ -17,7 +17,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
 }
 # Ingress rule for SSH (http 80)
 resource "aws_vpc_security_group_ingress_rule" "allow_http" {
-security_group_id = aws_security_group.mysec.id"
+security_group_id = aws_security_group.mysec.id
 from_port = 80
 to_port = 80
 protocol = "tcp"
