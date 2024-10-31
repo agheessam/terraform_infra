@@ -7,8 +7,6 @@ resource "aws_network_acl" "pub_subnet_nacl" {
     rule_no    = 111
     action     = "allow"
     cidr_block = "0.0.0.0/0"
-	from_port  = 0
-    to_port    = 0
   }
 
 #inbound rule for ssh
