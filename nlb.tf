@@ -1,6 +1,6 @@
 #Network Load Balancer
 #4.	Create a Network Load Balancer (Name: PRT) and configure it to forward traffic to all instances. 
-Display the output of each instance's web page when accessed through the NLB.
+#Display the output of each instance's web page when accessed through the NLB.
 
 #define the network load balancer
 resource "aws_lb" "PRT" {

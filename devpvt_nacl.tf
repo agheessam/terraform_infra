@@ -44,3 +44,4 @@ resource "aws_network_acl_association" "pvt_nacl_association" {
   network_acl_id = aws_network_acl.pvt_subnet_nacl.id
   subnet_id      = aws_subnet.pvt_sub1.id  # Replace with your subnet resource
 }
+

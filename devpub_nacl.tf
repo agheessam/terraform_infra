@@ -7,6 +7,8 @@ resource "aws_network_acl" "pub_subnet_nacl" {
     rule_no    = 111
     action     = "allow"
     cidr_block = "0.0.0.0/0"
+	from_port  = 0
+    to_port    = 0
   }
 
 #inbound rule for ssh
@@ -40,11 +42,11 @@ resource "aws_network_acl" "pub_subnet_nacl" {
   }
 }
 
-resource "aws_network_acl_association" "pub_nacl_association" {
+resource "aws_network_acl_association" "pub_nacl_association1" {
   network_acl_id = aws_network_acl.pub_subnet_nacl.id
   subnet_id      = aws_subnet.pub_sub1.id  # Replace with your subnet resource
 }
-resource "aws_network_acl_association" "pub_nacl_association" {
+resource "aws_network_acl_association" "pub_nacl_association2" {
   network_acl_id = aws_network_acl.pub_subnet_nacl.id
   subnet_id      = aws_subnet.pub_sub2.id  # Replace with your subnet resource
 }
